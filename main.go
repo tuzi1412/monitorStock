@@ -37,7 +37,7 @@ func main() {
 			t := time.Now()
 			if t.Weekday() >= 1 && t.Weekday() <= 5 && ((t.Local().Hour() == 9 && t.Minute() >= 30) || (t.Local().Hour() == 11 && t.Minute() <= 30) ||
 				t.Local().Hour() == 10 || (t.Local().Hour() >= 13 && t.Local().Hour() <= 14)) {
-				res, err := client.Get("https://hq.sinajs.cn/?_=0.4173090047767789&list=sz000586")
+				res, err := client.Get("https://hq.sinajs.cn/?list=sz000586")
 				if err != nil {
 					fmt.Println("error occurred!:", err)
 					continue
